@@ -1,0 +1,333 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.left-menu{
+    height: 100vh;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(96,126,152);
+    background: linear-gradient(0deg, rgb(99, 127, 152) 0%, rgba(8,61,105,1) 70%); */
+    -webkit-app-region : no-drag;
+    position: fixed;
+    left: 0;
+    transform: translateX(-40px);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.9;
+}
+.left-menu-on{
+    height: 100vh;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(96,126,152);
+    background: linear-gradient(0deg, rgb(99, 127, 152) 0%, rgba(8,61,105,1) 70%); */
+    -webkit-app-region : no-drag;
+    position: fixed;
+    left: 0;
+    transform: translateX(0px);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.9;
+}
+.icon-cross{
+    position: absolute;
+    top: 5px;
+    color: white;
+    opacity: 0.4;
+}
+.icon-cross:hover{
+    opacity: 1;
+}
+.red{
+    color: white;
+    opacity: 0.4;
+}
+.red:hover{
+    color: red;
+    opacity: 1;
+}
+.yellow{
+    color: white;
+    margin: 20px 0 20px 0;
+    opacity: 0.4;
+}
+.yellow:hover{
+    color: yellow;
+    opacity: 1;
+}
+.green{
+    color: white;
+    opacity: 0.4;
+}
+.green:hover{
+    color: rgb(8, 230, 8);
+    opacity: 1;
+}
+.icon-cog{
+    position: absolute;
+    bottom: 5px;
+    font-size: 24px;
+    color: white;
+    opacity: 0.4;
+}
+.icon-cog:hover{
+    opacity: 1;
+}
+.icon-cog-open{
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+.icon-cog-close{
+    transform: rotate(-180deg);
+    transition-duration: 0.5s;
+}
+.settings-menu{
+    width: 120px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 7px;
+    left: -120px;
+    opacity: 0;
+    padding: 2px 10px;
+}
+.settings-menu-open{
+    transform: translateX(160px);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+.settings-menu-close{
+    opacity: 0;
+    transform: translateX(-160px);
+    transition: 0.5s ease-in-out;
+}
+
+.icon-briefcase, .icon-moon-fill, .icon-fire, .icon-droplet{
+    opacity: 0.5;
+}
+.briefcase-active{
+    color: rgb(16, 16, 215);
+    opacity: 1;
+}
+.moon-active{
+    color: rgb(205, 205, 46);
+    opacity: 1;
+}
+.fire-active{
+    color: rgb(228, 64, 13);
+    opacity: 1;
+}
+.water-active{
+    color: rgb(13, 163, 228);
+    opacity: 1;
+}
+.icon-briefcase:hover{
+    opacity: 1;
+}
+
+.icon-moon-fill:hover{
+    opacity: 1;
+}
+.icon-fire:hover{
+    opacity: 1;
+}
+.icon-droplet:hover{
+    opacity: 1;
+}
+
+
+.main-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    /* background: rgb(96,126,152);
+    background: linear-gradient(0deg, rgb(99, 127, 152) 0%, rgba(8,61,105,1) 100%); */
+}
+.busines{
+    background: rgb(96,126,152);
+    background: linear-gradient(0deg, rgb(99, 127, 152) 0%, rgba(8,61,105,1) 100%);
+}
+.night{
+    /* background: rgb(17,20,37);
+    background: linear-gradient(180deg, rgba(17,20,37,1) 10%, rgba(55,81,224,1) 100%); */
+    background-image: url(img/polar.jpg);
+    background-size: cover;
+    -moz-background-cover: cover;
+    -ms-background-cover: cover;
+    -webkit-background-cover: cover;
+}
+/* .main-block i{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+} */
+.fire{
+    background-image: url(img/sunset.jpg);
+    background-size: cover;
+    -moz-background-cover: cover;
+    -ms-background-cover: cover;
+    -webkit-background-cover: cover;
+}
+.water{
+    background-image: url(img/water.jpg);
+    background-size: cover;
+    -moz-background-cover: cover;
+    -ms-background-cover: cover;
+    -webkit-background-cover: cover;
+}
+.main-block_title{
+    cursor: default;
+    -webkit-app-region: drag;
+    height: 60px;
+    text-align: center;
+    /* color: rgb(208, 208, 208); */
+    color: white;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+}
+.main-block_title:focus {
+    outline: none;
+}
+.todo-list{
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+.formInput{
+    height: 40px;
+    width: 100vw;
+    text-align: center;
+    /* color: rgb(208, 208, 208); */
+    color: white;
+    font-size: 15px;
+    border: none;
+    background: rgba(96,126,152,0.3);
+}
+.formInput:focus {
+    outline: none;
+}
+.newTask{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 5px 10px 5px 10px;
+}
+.newTask:hover{
+    background: rgba(96,126,152,0.6);
+    padding: 5px 10px 5px 50px;
+}
+.taskText{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    /* color: rgb(208, 208, 208); */
+    font-size: 18px;
+}
+.text-done{
+    text-decoration: line-through;
+}
+.task-done{
+    opacity: 0.3;
+}
+.done-icon{
+    color: aqua;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+}
+.icon-checkmark, .icon-bin{
+    background-color: transparent;
+    /* color: rgb(208, 208, 208); */
+    color: white;
+    font-size: 20px;
+    margin-left: 8px;
+    border: none;
+}
+.icon-checkmark:focus, .icon-bin:focus{
+    outline: none;
+}
+.icon-bin:hover{
+    color: tomato;
+}
+.icon-checkmark:hover{
+    color: aqua;
+}
+
+.active{
+    background: rgba(96,126,152,0.6);
+}
+.make-red{
+    background: rgba(236, 123, 103, 0.7);
+}
+.make-yellow{
+    background: rgba(198, 198, 58, 0.7);
+}
+.make-green{
+    background: rgba(117, 193, 117, 0.7);
+}
+
+/* настройка уведомления удаления */
+
+.my-popup{
+    background-color: rgba(31, 35, 39, 0.87)!important;
+    width: 15em!important;
+    padding: .2em!important;
+}
+.my-title{
+    margin: 0.4em 0 0 0!important;
+    color: #fff!important;
+    font-size: 1.3em!important;
+    font-weight: 500!important;
+}
+
+.my-confirm-button{
+    margin: .3125em!important;
+    padding: .325em .3em!important;
+    box-shadow: none!important;
+    font-weight: 300!important;
+    background-color: rgba(89, 89, 89, 0.7)!important;
+    color: #fff!important;
+    font-size: 1.0625em!important;
+}
+.my-confirm-button:hover{
+    background-color: rgba(117, 193, 117, 0.8)!important;
+}
+.my-cancel-button{
+    margin: .3125em!important;
+    padding: .325em .3em!important;
+    box-shadow: none!important;
+    font-weight: 300!important;
+    background-color: rgba(89, 89, 89, 0.7)!important;
+    color: #fff!important;
+    font-size: 1.0625em!important;
+}
+.my-cancel-button:hover{
+    background-color: rgba(236, 123, 103, 0.8)!important;
+}
+.my-popup-result{
+    background:rgba(31, 35, 39, 1)!important;
+}
